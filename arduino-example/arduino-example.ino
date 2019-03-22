@@ -1,3 +1,11 @@
+int M1a = 10;
+int M1b = 9;
+int M2a = 6;
+int M2b = 5;
+
+
+
+
 void setup() {
   Serial.begin(115200);
 }
@@ -12,6 +20,10 @@ void serialEvent() {
 
   if (input == "forward") {
     Serial.println("FORWARD!");
+    digitalWrite(M1a,HIGH);
+    digitalWrite(M1b,LOW);
+    digitalWrite(M1a,HIGH);
+    digitalWrite(M1b,LOW);
     // go forward
   } else if (input == "left") {
     // go left
