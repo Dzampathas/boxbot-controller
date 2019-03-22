@@ -22,14 +22,18 @@ void serialEvent() {
     Serial.println("FORWARD!");
     digitalWrite(M1a,HIGH);
     digitalWrite(M1b,LOW);
-    digitalWrite(M1a,HIGH);
-    digitalWrite(M1b,LOW);
+    digitalWrite(M2a,HIGH);
+    digitalWrite(M2b,LOW);
     // go forward
   } else if (input == "left") {
     // go left
   } else if (input == "right") {
     // go right
   } else if (input == "backwards") {
+    digitalWrite(M1a,LOW);
+    digitalWrite(M1b,HIGH);
+    digitalWrite(M2a,LOW);
+    digitalWrite(M2b,HIGH);
     // go back
   }
 }
